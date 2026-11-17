@@ -1,0 +1,125 @@
+name: 🐞 Bug Report
+description: Report an issue or broken image preview in Img Preview
+title: "[Bug]: "
+labels: ["🐞 bug", "🚥 status: triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report an issue! Please provide as much detail as possible to help us reproduce and fix it quickly.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+      placeholder: |
+        Image preview does not appear when hovering over...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: image-type
+    attributes:
+      label: Image Format / Source
+      description: What type of image is causing the issue?
+      multiple: true
+      options:
+        - SVG (.svg)
+        - WebP (.webp)
+        - PNG (.png)
+        - JPEG/JPG (.jpeg / .jpg)
+        - AVIF (.avif)
+        - GIF (.gif)
+        - Data URI (base64 or svg+xml)
+        - Remote HTTP/HTTPS URL
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction-snippet
+    attributes:
+      label: Code Snippet
+      description: Provide the line or snippet of code where the image is referenced.
+      placeholder: |
+        <img src="./assets/icon.svg" />
+        /* or */
+        background-image: url('https://example.com/image.png');
+      render: html
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: Steps To Reproduce
+      description: How can we reproduce this behavior?
+      placeholder: |
+        1. Open file '...'
+        2. Look at gutter margin / hover over line ...
+        3. Preview does not show / shows error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: A clear and concise description of what you expected to happen.
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or Video
+      description: Attach screenshots or screen recordings if visual context helps explain the problem.
+      placeholder: Drag and drop images here.
+    validations:
+      required: false
+
+  - type: input
+    id: vscode-version
+    attributes:
+      label: VS Code Version
+      description: What version of VS Code are you using? (Help -> About)
+      placeholder: e.g. 1.85.0 (Universal / x64)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating System
+      description: What OS are you running?
+      options:
+        - Windows 11 / 10
+        - macOS (Apple Silicon M-series)
+        - macOS (Intel)
+        - Linux (Ubuntu / Debian / Fedora)
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Developer Tools Console Logs
+      description: Open Help -> Toggle Developer Tools -> Console, and paste any red error logs here.
+      render: shell
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Checklist
+      options:
+        - label: I have checked the existing [issues](https://github.com/chouhan-rahul/imgpreview/issues) to avoid duplicates.
+          required: true
+        - label: I have read the [Contributing Guidelines](https://github.com/chouhan-rahul/imgpreview/blob/main/CONTRIBUTING.md).
+          required: true
+        - label: I agree to follow the [Code of Conduct](https://github.com/chouhan-rahul/imgpreview/blob/main/CODE_OF_CONDUCT.md).
+          required: true
+

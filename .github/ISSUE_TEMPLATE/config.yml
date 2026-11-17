@@ -1,0 +1,24 @@
+blank_issues_enabled: true
+blank_issues_title: "🏳️ General Issue"
+
+contact_links:
+  - name: 💬 Ask a Question (Discussions)
+    url: https://github.com/chouhan-rahul/imgpreview/discussions
+    about: Got a question or need help? Ask here! Please do not open an issue for general questions.
+
+  - name: 📖 Contributing Guidelines
+    url: https://github.com/chouhan-rahul/imgpreview/blob/main/CONTRIBUTING.md
+    about: Please read this before opening a Pull Request or Issue.
+
+  - name: ❤️ Sponsor on GitHub
+    url: https://github.com/sponsors/chouhan-rahul
+    about: Support open source development via GitHub Sponsors.
+
+  - name: ☕ Buy Me A Coffee
+    url: https://buymeacoffee.com/rahulchouhan
+    about: Fuel coding sessions with a coffee!
+
+  - name: 🍵 Support on Ko-fi
+    url: https://ko-fi.com/rahulchouhan
+    about: Support the project via Ko-fi.
+

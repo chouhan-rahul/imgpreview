@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+
+# Production build outputs
+dist/
+out/
+
+# VS Code Extension Packages
+*.vsix
+
+# VS Code test runner directory (downloaded VS Code instances)
+.vscode-test/
+
+# Logs & debugging
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Test coverage reports (e.g. Codecov, c8, nyc)
+coverage/
+.nyc_output/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.tmp
+*.bak
+
+# Local Environment Variables & Secrets
+.env
+.env.*
+!.env.example
+
+# TypeScript build cache
+*.tsbuildinfo

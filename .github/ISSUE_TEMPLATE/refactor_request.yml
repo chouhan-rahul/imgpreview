@@ -1,0 +1,63 @@
+name: ♻️ Refactor Request
+description: Propose a code cleanup or architectural improvement in Img Preview
+title: "refactor: "
+labels: ["♻️ refactor", "🚥 status: triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Refactoring improves code quality, performance, and testability without changing outward behavior. Thanks for helping keep the codebase clean!
+
+  - type: input
+    id: scope
+    attributes:
+      label: Target File / Module
+      description: Which file or module needs refactoring?
+      placeholder: e.g. src/scanner.ts, src/resolver.ts, or src/gutterManager.ts
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: Current State & Problem
+      description: Describe the messy code, code duplication, or performance bottleneck.
+      placeholder: |
+        The current regex scanner can be simplified to reduce memory allocations...
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: How do you plan to restructure it?
+      placeholder: |
+        Extract the decoding logic into a standalone utility function...
+    validations:
+      required: true
+
+  - type: textarea
+    id: benefits
+    attributes:
+      label: Expected Benefits
+      description: What is the ROI? (e.g. Faster scanning, smaller memory footprint, easier testing)
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Checklist
+      options:
+        - label: I have checked the existing [issues](https://github.com/chouhan-rahul/imgpreview/issues) to avoid duplicates.
+          required: true
+        - label: This request is strictly for refactoring (no functional/breaking changes included).
+          required: true
+        - label: I have read the [Contributing Guidelines](https://github.com/chouhan-rahul/imgpreview/blob/main/CONTRIBUTING.md).
+          required: true
+        - label: I agree to follow the [Code of Conduct](https://github.com/chouhan-rahul/imgpreview/blob/main/CODE_OF_CONDUCT.md).
+          required: true
+        - label: I would be willing to work on this refactor.
+          required: false
+

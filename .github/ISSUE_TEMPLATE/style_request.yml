@@ -1,0 +1,65 @@
+name: 🎨 UI / Preview Style Request
+description: Propose a design change or UI improvement to previews, hover cards, or status bar
+title: "style: "
+labels: ["🎨 style", "🚥 status: triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping make Img Preview look cleaner and more accessible!
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Affected Component
+      description: Which UI component does this affect?
+      options:
+        - Hover Preview Card
+        - Gutter Icon Scaling / Alignment
+        - Status Bar Indicator
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-state
+    attributes:
+      label: Current Look / Problem
+      description: What doesn't look right or could be improved? (e.g. contrast, spacing, dark/light theme visibility)
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Design / Layout
+      description: Describe the new appearance or behavior. Include markdown formatting, spacing ideas, or theme considerations.
+      placeholder: |
+        I suggest formatting dimensions and size into a cleaner inline table or adding...
+    validations:
+      required: true
+
+  - type: textarea
+    id: mockups
+    attributes:
+      label: Mockups / Screenshots
+      description: Attach screenshots, sketches, or mockup images.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Checklist
+      options:
+        - label: I have checked the existing [issues](https://github.com/chouhan-rahul/imgpreview/issues).
+          required: true
+        - label: I have considered dark and light theme accessibility.
+          required: true
+        - label: I have read the [Contributing Guidelines](https://github.com/chouhan-rahul/imgpreview/blob/main/CONTRIBUTING.md).
+          required: true
+        - label: I agree to follow the [Code of Conduct](https://github.com/chouhan-rahul/imgpreview/blob/main/CODE_OF_CONDUCT.md).
+          required: true
+        - label: I would be willing to implement this design change.
+          required: false
+

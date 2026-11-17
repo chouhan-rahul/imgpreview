@@ -1,0 +1,51 @@
+name: 📝 Documentation Update
+description: Report a missing, outdated, or incorrect piece of documentation
+title: "docs: "
+labels: ["📝 docs", "🚥 status: triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve the Img Preview documentation!
+
+  - type: input
+    id: doc-location
+    attributes:
+      label: Documentation Location
+      description: Where did you find the issue? (e.g. README.md, CONTRIBUTING.md, or VS Code settings descriptions)
+      placeholder: README.md section "Configuration Settings"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: What is wrong?
+      description: Describe the typo, missing information, or outdated content.
+      placeholder: |
+        The section mentions setting `...` but the actual setting is now `...`
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested-solution
+    attributes:
+      label: Suggested Improvement
+      description: If you have a specific suggestion or text to replace, please add it here.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Checklist
+      options:
+        - label: I have checked the existing [issues](https://github.com/chouhan-rahul/imgpreview/issues) to avoid duplicates.
+          required: true
+        - label: I have read the [Contributing Guidelines](https://github.com/chouhan-rahul/imgpreview/blob/main/CONTRIBUTING.md).
+          required: true
+        - label: I agree to follow the [Code of Conduct](https://github.com/chouhan-rahul/imgpreview/blob/main/CODE_OF_CONDUCT.md).
+          required: true
+        - label: I want to submit a PR to fix this documentation issue.
+          required: false
+

@@ -1,0 +1,62 @@
+name: ✨ Feature Request
+description: Suggest an idea or new capability for Img Preview
+title: "feat: "
+labels: ["✨ feat", "🚥 status: triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your interest in improving Img Preview! Please describe your proposed feature in detail.
+
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: Is your feature request related to a problem? Please describe.
+      description: A clear and concise description of what the problem is.
+      placeholder: |
+        I'm frustrated when working with... because...
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution-description
+    attributes:
+      label: Describe the solution you'd like
+      description: A clear and concise description of what you want to happen. Include any settings or command ideas.
+      placeholder: |
+        I would like the ability to...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Describe alternatives you've considered
+      description: A clear and concise description of any alternative solutions or workarounds you've considered.
+      placeholder: |
+        I thought about using... but...
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context or Mockups
+      description: Add any other context, UI sketches, or screenshots about the feature request here.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Checklist
+      options:
+        - label: I have checked the existing [issues](https://github.com/chouhan-rahul/imgpreview/issues) to avoid duplicates.
+          required: true
+        - label: I have read the [Contributing Guidelines](https://github.com/chouhan-rahul/imgpreview/blob/main/CONTRIBUTING.md).
+          required: true
+        - label: I agree to follow the [Code of Conduct](https://github.com/chouhan-rahul/imgpreview/blob/main/CODE_OF_CONDUCT.md).
+          required: true
+        - label: I would be willing to submit a PR for this feature.
+          required: false
+

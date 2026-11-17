@@ -1,0 +1,139 @@
+# ========================================================
+# 🏷️ GitHub Issue & PR Labels Configuration
+# Img Preview - VS Code Extension
+# ========================================================
+
+# --- 🔴 TYPES (The "What") ---
+- name: "🐞 bug"
+  color: "d93f0b" # Vibrant Orange-Red (High Visibility)
+  description: "Something isn't working as expected"
+
+- name: "✨ feat"
+  color: "1d76db" # Deep Tech Blue
+  description: "New feature or module addition"
+
+- name: "♻️ refactor"
+  color: "fbca04" # Sunflower Yellow
+  description: "Code improvement without changing behavior"
+
+- name: "📝 docs"
+  color: "5319e7" # Royal Purple
+  description: "Improvements or additions to documentation"
+
+- name: "🎨 style"
+  color: "ff9fdc" # Soft Pink
+  description: "UI/UX, preview layout, or card design changes"
+
+- name: "⚡ perf"
+  color: "006b75" # Teal (System/Speed)
+  description: "Code changes that improve scanning or decoding speed"
+
+- name: "🛡️ security"
+  color: "b60205" # Blood Red (Critical Warning)
+  description: "Fixing a security vulnerability or dependency issue"
+
+- name: "🧪 test"
+  color: "c5def5" # Light Blue Grey
+  description: "Adding or correcting tests and test fixtures"
+
+- name: "📦 chore"
+  color: "E6E6E6" # Light Grey (Low noise)
+  description: "Updating build tasks, esbuild, dependencies, etc."
+
+# --- 🚦 WORKFLOW STATUS (Traffic Light System) ---
+- name: "🚥 status: triage"
+  color: "f9d0c4" # Pale Red/Orange (Needs attention)
+  description: "Waiting to be reviewed by a maintainer"
+
+- name: "🚧 status: in-progress"
+  color: "dbab09" # Construction Yellow
+  description: "Someone is currently working on this"
+
+- name: "🛑 status: blocked"
+  color: "232323" # Dark Grey/Black (Hard stop)
+  description: "Progress is stuck on an external dependency"
+
+- name: "✅ status: completed"
+  color: "0e8a16" # Success Green
+  description: "This issue has been resolved"
+
+- name: "💤 status: on-hold"
+  color: "cccccc" # Neutral Grey
+  description: "This will be addressed at a later date"
+
+# --- 🔥 PRIORITY LEVELS (Heat Map) ---
+- name: "🔥 priority: critical"
+  color: "b60205" # Deepest Red
+  description: "Must be fixed immediately; crashes or blocks editor"
+
+- name: "🔝 priority: high"
+  color: "d93f0b" # Orange Red
+  description: "Important task for the current milestone"
+
+- name: "🟦 priority: medium"
+  color: "1d76db" # Standard Blue
+  description: "Standard task; do it when possible"
+
+- name: "☕ priority: low"
+  color: "c2e0c6" # Pale Green (Relaxed)
+  description: "Minor improvement; no rush"
+
+# --- 🤝 COMMUNITY (Friendly Colors) ---
+- name: "🌱 good first issue"
+  color: "7057ff" # Friendly Purple
+  description: "Good for newcomers to the project"
+
+- name: "🤝 help wanted"
+  color: "008672" # Teal Green (Inviting)
+  description: "Extra attention or expertise needed"
+
+- name: "🚫 won't fix"
+  color: "ffffff" # White (Neutral/Closed)
+  description: "This issue will not be addressed"
+
+- name: "👯 duplicate"
+  color: "cfd3d7" # Grey
+  description: "Similar to an existing issue"
+
+- name: "🙋 question"
+  color: "d4c5f9" # Lavender
+  description: "Further information is requested"
+
+# --- 🖼️ EXTENSION COMPONENTS (Img Preview Specific) ---
+- name: "📌 gutter"
+  color: "007acc" # VS Code Blue
+  description: "Related to gutter margin thumbnail decorations"
+
+- name: "🔍 hover"
+  color: "6f42c1" # Purple
+  description: "Related to hover tooltip preview card and metadata"
+
+- name: "🖼️ format: svg"
+  color: "ff9900" # SVG Orange
+  description: "Specific to SVG parsing, viewBox or rendering"
+
+- name: "🖼️ format: webp/avif"
+  color: "2ea44f" # Modern Green
+  description: "Specific to WebP, AVIF, or next-gen formats"
+
+- name: "🌐 remote-images"
+  color: "0366d6" # Network Blue
+  description: "Related to downloading and caching remote HTTP/HTTPS images"
+
+- name: "📦 data-uri"
+  color: "ea4aaa" # Magenta
+  description: "Related to inline Base64 or UTF-8 Data URIs"
+
+# --- 💻 OPERATING SYSTEMS ---
+- name: "🪟 os: windows"
+  color: "0078d7" # Windows Blue
+  description: "Specific to Windows operating system"
+
+- name: "🍎 os: macos"
+  color: "000000" # Apple Black
+  description: "Specific to macOS operating system"
+
+- name: "🐧 os: linux"
+  color: "f5c211" # Linux Gold
+  description: "Specific to Linux operating system"
+

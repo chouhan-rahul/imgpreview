@@ -1,0 +1,207 @@
+{
+  "name": "imgpreview",
+  "displayName": "Img Preview",
+  "description": "Blazing fast, lightweight image preview in editor gutter and hover tooltip. Supports SVG, WebP, PNG, JPEG, GIF, AVIF, ICO, Data URIs & remote URLs.",
+  "version": "0.1.0",
+  "publisher": "rahulchouhan",
+  "author": {
+    "name": "Rahul Chouhan",
+    "url": "https://github.com/chouhan-rahul"
+  },
+  "icon": "media/icon.png",
+  "galleryBanner": {
+    "color": "#181818",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chouhan-rahul/imgpreview.git"
+  },
+  "homepage": "https://github.com/chouhan-rahul/imgpreview#readme",
+  "bugs": {
+    "url": "https://github.com/chouhan-rahul/imgpreview/issues"
+  },
+  "qna": "https://github.com/chouhan-rahul/imgpreview/discussions",
+  "sponsor": {
+    "url": "https://github.com/sponsors/chouhan-rahul"
+  },
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/chouhan-rahul"
+    },
+    {
+      "type": "ko-fi",
+      "url": "https://ko-fi.com/rahulchouhan"
+    },
+    {
+      "type": "buy-me-a-coffee",
+      "url": "https://buymeacoffee.com/rahulchouhan"
+    }
+  ],
+  "badges": [
+    {
+      "url": "https://img.shields.io/github/stars/chouhan-rahul/imgpreview",
+      "href": "https://github.com/chouhan-rahul/imgpreview",
+      "description": "GitHub Stars"
+    },
+    {
+      "url": "https://img.shields.io/github/license/chouhan-rahul/imgpreview",
+      "href": "https://github.com/chouhan-rahul/imgpreview/blob/main/LICENSE",
+      "description": "License"
+    },
+    {
+      "url": "https://img.shields.io/github/v/release/chouhan-rahul/imgpreview",
+      "href": "https://github.com/chouhan-rahul/imgpreview/releases",
+      "description": "Latest Release"
+    }
+  ],
+  "license": "BSD-3-Clause",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Visualization",
+    "Programming Languages",
+    "Other"
+  ],
+  "keywords": [
+    "image preview",
+    "image",
+    "preview",
+    "image viewer",
+    "gutter preview",
+    "hover preview",
+    "thumbnail",
+    "svg",
+    "webp",
+    "png",
+    "jpeg",
+    "jpg",
+    "gif",
+    "avif",
+    "ico",
+    "bmp",
+    "tiff",
+    "data uri",
+    "base64",
+    "remote images"
+  ],
+  "main": "./dist/extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "imgPreview.toggleGutter",
+        "title": "Img Preview: Toggle Gutter Previews"
+      },
+      {
+        "command": "imgPreview.clearCache",
+        "title": "Img Preview: Clear Image Cache"
+      },
+      {
+        "command": "imgPreview.copyDataUri",
+        "title": "Img Preview: Copy Image as Data URI (Base64)"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "imgPreview.copyDataUri",
+          "group": "modification@100"
+        }
+      ]
+    },
+    "configuration": {
+      "type": "object",
+      "title": "Img Preview Configuration",
+      "properties": {
+        "imgPreview.enableGutter": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show image thumbnails in the editor gutter."
+        },
+        "imgPreview.enableHover": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show image previews and metadata when hovering over image references."
+        },
+        "imgPreview.gutterIconSize": {
+          "type": "string",
+          "enum": [
+            "contain",
+            "cover",
+            "auto"
+          ],
+          "default": "contain",
+          "description": "Controls how images are scaled inside gutter thumbnails."
+        },
+        "imgPreview.debounceDelay": {
+          "type": "number",
+          "default": 200,
+          "minimum": 0,
+          "maximum": 2000,
+          "description": "Delay in milliseconds before refreshing previews after document changes."
+        },
+        "imgPreview.maxFileSizeMB": {
+          "type": "number",
+          "default": 25,
+          "minimum": 1,
+          "maximum": 100,
+          "description": "Maximum image file size in MB to process."
+        },
+        "imgPreview.enableRemoteImages": {
+          "type": "boolean",
+          "default": true,
+          "description": "Allow downloading and previewing images from remote HTTP/HTTPS URLs."
+        },
+        "imgPreview.supportedExtensions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": [
+            "png",
+            "jpg",
+            "jpeg",
+            "gif",
+            "svg",
+            "webp",
+            "bmp",
+            "ico",
+            "avif",
+            "tiff",
+            "tif",
+            "apng"
+          ],
+          "description": "File extensions to recognize when detecting image references."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "test": "node tests/test.js",
+    "vscode:prepublish": "npm run package",
+    "compile": "node esbuild.config.js",
+    "watch": "node esbuild.config.js --watch",
+    "package": "node esbuild.config.js --minify",
+    "package-vsix": "npm run package && vsce package --no-dependencies"
+  },
+  "overrides": {
+    "minimatch": ">=11.0.1",
+    "glob": ">=14.0.2",
+    "image-size": ">=2.0.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.0",
+    "@types/vscode": "^1.85.0",
+    "@vscode/vsce": "^3.2.0",
+    "esbuild": "^0.28.2",
+    "glob": ">=14.0.2",
+    "image-size": ">=2.0.3",
+    "minimatch": ">=11.0.1",
+    "typescript": "^5.7.0"
+  }
+}

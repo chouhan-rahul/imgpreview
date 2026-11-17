@@ -1,0 +1,48 @@
+# Dependencies
+node_modules/**
+
+# Development files
+.vscode/**
+.vscode-test/**
+.github/**
+src/**
+tests/**
+test/**
+
+# Unused assets
+media/screenshots/**
+media/icon.svg
+
+# Build configuration
+tsconfig.json
+esbuild.config.js
+
+# Git files
+.git/**
+.gitignore
+
+# Package files
+*.vsix
+
+# Source maps
+dist/*.map
+
+# Environment files
+.env
+.env.*
+
+# Coverage reports
+coverage/**
+.nyc_output/**
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Documentation for contributors
+CONTRIBUTING.md
+CODE_OF_CONDUCT.md
+SECURITY.md
