@@ -2,7 +2,7 @@
   "name": "imgpreview",
   "displayName": "Img Preview",
   "description": "Blazing fast, lightweight image preview in editor gutter and hover tooltip. Supports SVG, WebP, PNG, JPEG, GIF, AVIF, ICO, Data URIs & remote URLs.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "rahulchouhan",
   "author": {
     "name": "Rahul Chouhan",
