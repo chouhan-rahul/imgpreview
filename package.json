@@ -2,7 +2,7 @@
   "name": "imgpreview",
   "displayName": "Img Preview",
   "description": "Blazing fast, lightweight image preview in editor gutter and hover tooltip. Supports SVG, WebP, PNG, JPEG, GIF, AVIF, ICO, Data URIs & remote URLs.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "rahulchouhan",
   "author": {
     "name": "Rahul Chouhan",
@@ -195,13 +195,13 @@
     "image-size": ">=2.0.3"
   },
   "devDependencies": {
-    "@types/node": "^20.17.0",
+    "@types/node": "^26.6.6",
     "@types/vscode": "^1.85.0",
-    "@vscode/vsce": "^3.2.0",
+    "@vscode/vsce": "^4.1.1",
     "esbuild": "^0.28.2",
     "glob": ">=14.0.2",
     "image-size": ">=2.0.3",
     "minimatch": ">=11.0.1",
-    "typescript": "^5.7.0"
+    "typescript": "^7.0.2"
   }
 }

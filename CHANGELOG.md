@@ -2,7 +2,21 @@
 
 All notable changes to the **Img Preview** extension will be documented in this file.
 
-## [0.1.0] - 2026-11-11
+## [0.1.1] - 2026-11-20
+
+### 🔧 Maintenance & Improvements
+
+- Updated GitHub Actions workflows to use the latest major versions.
+- Updated development dependencies:
+  - `@vscode/vsce` to `4.1.1`.
+  - `TypeScript` to `7.0.2`.
+  - `@types/node` to `26.6.6`.
+- Updated package metadata and licensing information.
+- Improved issue reporting configuration with additional support links.
+
+---
+
+## [0.1.0] - 2026-11-17
 
 ### 🎉 Initial Release
 
